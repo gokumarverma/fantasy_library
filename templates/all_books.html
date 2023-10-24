@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid bg-body-secondary ">
+<h3 class="text-left"><ul><li>All Books in our fantasy book library</li></ul></h3>
+{% if books|length >0 %}
+<ol>
+    {% for book in books %}  
+        <li>{{ book|capitalize }}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+<p>It seems like we don't have any book in our library yet. To add book click on Add Book on top link</p>
+{% endif %}
+
+</div>
+{% endblock %}

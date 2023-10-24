@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid bg-body-secondary">
+<h3 class="text-left"><ul><li>This is Fantasy libaray app</li></ul></h3>
+<p>To view all books click on 
+<a href="{{url_for('all_books')}}">All Books</a></p>
+<p>To view all authors click on <a href="{{url_for('all_authors')}}">All Authors</a></p> </p>
+<p>To view all authors and books click on <a href="{{url_for('list_all')}}">All Authors and Books</a></p> </p>
+</div>
+{% endblock %}
