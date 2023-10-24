@@ -1,35 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid bg-body-secondary">
-<h3 class="text-left"><ul><li>All Authors in our fantasy book library</li></ul></h3>
-
-  {% if authors|length>0 %}
-  <ol>
-  {% for author in authors  %}  
-
-    <li>{{ author|capitalize }}</li>
+<div class="container-fluid">
+  <div class="mt-4 p-5 bg-secondary-subtle text-black rounded">
+    <h3 class="text-left">
+      <ul>
+        <li>All Authors in our fantasy book library</li>
+      </ul>
+    </h3>
+    <div class="container-fluid">
+      {% if authors|length>0 %}
+      <ol>
+        {% for author in authors %}
+        <li>{{ author|capitalize }}</li>
         {% endfor %}
       </ol>
-  {% else %}
-  Hmm..., No Author yet in our fantasy library, To add author click on Add Author on top link
-  {% endif %}
+      {% else %}
+      <p>Hmm..., No Author yet in our fantasy library, To add author click on Add Author on top link </p>
+      {% endif %}
+    </div>
+    <h3 class="text-left">
+      <ul>
+        <li>All Books in our fantasy book library</li>
+      </ul>
+    </h3>
+    <div class="container-fluid">
 
-</div>
-<div class="container-fluid">
-<h3 class="text-left"><ul><li>All Books in our fantasy book library</li></ul></h3>
-
-
-  {% if books|length>0 %}
-  <ol>
-  {% for book in books  %}  
-      <li>{{ book|capitalize }}</li>
+      {% if books|length>0 %}
+      <ol>
+        {% for book in books %}
+        <li>{{ book|capitalize }}</li>
         {% endfor %}
-</ol>
-        {% else %}
-        Hmm..., No Book yet in our fantasy library, To add book click on Add book on top link
-        {% endif %}
-      </div>
-      </div>
+      </ol>
+      {% else %}
+      <p>Hmm..., No Book yet in our fantasy library, To add book click on Add book on top link</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
 
 {% endblock %}

@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="mt-4 p-5 bg-secondary-subtle text-black rounded">
+        <h3 class="text-left">
+            <ul>
+                <li>You can add your books to fantasy library here</li>
+            </ul>
+        </h3>
+        <form method="POST">
+            <div>
+                {{form.hidden_tag()}}
+                {{form.name.label()}} {{form.name()}}
 
-<div class="container-fluid bg-body-secondary">
-<h3 class="text-left"><ul><li>You can add your books to fantasy library here</li></ul></h3>
-<form method="POST">
-    <div>
-{{form.hidden_tag()}}
-{{form.name.label()}} {{form.name()}}
+                {{form.author_id.label()}} {{form.author_id()}}
+                {{form.submit()}}
+            </div>
+    </div>
 
-{{form.author_id.label()}} {{form.author_id()}}
-{{form.submit()}}
-</div>
-
-</form>
-</div>
-{% endblock %}
+    </form>
+    {% endblock %}

@@ -5,10 +5,3 @@
 # from sqlalchemy import Integer
 # from main import db
 # from main import app
-
-
-
-
-
-
-
